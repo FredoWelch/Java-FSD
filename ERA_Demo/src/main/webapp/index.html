@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 id="headline">Employee Request Form</h2>
+	<h4 id="username"></h3>
+
+	<form>
+		<label for="purpose"><b>Purpose</b></label> <input id="purpose_input"
+			type="text" placeholder="purpose" name="purpose" required> <label
+			for="amount"><br /> <b>Amount</b></label> <input id="amount_input"
+			type="text" placeholder="0.00" name="amount" required> <br />
+		<button type="button" id="request_submit"
+			onclick="updateReimbursement()">Submit</button>
+	</form>
+
+	<form id="managerForm" method="post" action="servlet">
+		<label for="requestId"><b>Request ID</b></label> <input
+			id="requestId_input" type="text" placeholder="requestId"
+			name="requestId" required> <label for="status"><br />
+			<b>Change status to</b></label> <input id="status_input" type="text"
+			placeholder="0 to deny, 2 to approve" name="status" required>
+		<br />
+		<button type="button" id="status_submit" onclick="updateStatus()">Submit</button>
+	</form>
+	<div>
+		<br></br> <b>Reimbursement requests</b>
+	</div>
+	<textarea id="all_reimbursements" rows="20" cols="120">
+Press refresh to get information
+</textarea>
+	</br>
+	<button type="button" id="refresh_request"
+		onclick="showMyReimbursements()">Refresh</button>
+	</br>
+	<script type="text/javascript" src="resources/functions.js"></script>
+</body>
+</html>
